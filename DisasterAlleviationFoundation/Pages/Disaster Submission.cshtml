@@ -1,0 +1,90 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.Disaster_SubmissionModel
+@{
+	ViewData["Title"] = "Disaster Submission";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Disaster Submission</title>
+	<style>
+		  .logoutbtn{
+            background-color: mediumpurple;
+            color: black;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .logoutbtn:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: black;
+        }
+
+		.subbtn {
+			background-color: mediumpurple;
+			color: black;
+			padding: 16px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			opacity: 0.9;
+		}
+
+			.subbtn:hover {
+				opacity: 1;
+			}
+	</style>
+</head>
+<body>
+	<div class="container" style="color:black">
+		<h1>Disaster Submission</h1>
+	</div>
+	<div class="container">
+		<br>
+		<form action="Logout">
+			<label for="name">Disaster Name:</label>
+			<input type="text" class="form-control"
+				   id="name" placeholder="Enter Disaster Name"
+				   name="name">
+			<label for="type">Aid Type:</label>
+			<input type="text" class="form-control"
+				   id="type" placeholder="Enter Aid Type"
+				   name="type"><br /><br />
+				   <label for="start">Start Date:</label>
+			<input type="date" class="form-control"
+				   id="start" placeholder="Enter Start Date"
+				   name="start">
+			<label for="end">End Date:</label>
+			<input type="date" class="form-control"
+				   id="end" placeholder="Enter End Date"
+				   name="end"><br /><br />
+			<label for="loc">Location:</label>
+			<input type="text" class="form-control"
+				   id="loc" placeholder="Enter Location"
+				   name="loc">
+			<label for="des">Description:</label>
+			<input type="text" class="form-control"
+				   id="des" placeholder="Enter Description"
+				   name="des" style="height:200px"><br /><br />
+		
+			
+		</form>
+		<form action="Logout" id="disasterForm">
+			<button type="submit" class="logoutbtn">Logout</button>
+			
+
+		</form>
+	
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.Category_ManagementModel
+@{
+    ViewData["Title"] = "Category Management";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+  .logbtn{
+            background-color: mediumpurple;
+            color: black;
+            padding: 16px 20px;
+             margin: 8px 0;
+         border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .logbtn:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="text-center">
+    <h1 class="display-4">Category Management</h1>
+
+    <p>This webpage is for inputted data from <b>Donations</b>and <b>Disaster Submissions.</b>Results will appear afterbthe user enters data.</p>
+   <form action="Logout">
+            <button type="submit" class="logbtn">Logout</button>
+   </form>
+   
+</div>
+</body>
+</html>

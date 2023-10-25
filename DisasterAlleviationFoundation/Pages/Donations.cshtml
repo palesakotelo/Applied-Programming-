@@ -1,0 +1,248 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.DonationsModel
+@{
+    ViewData["Title"] = "Donations";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: purple;
+  color:black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+		  .subbtn{
+            background-color: mediumpurple;
+            color: black;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .subbtn:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: black;
+        }
+}
+
+</style>
+</head>
+<body>
+
+<h2>Donation Form</h2>
+
+<div class="container">
+  <form action="Disaster Submission" id="donationForm">
+    <div class="row">
+      <div class="col-25">
+        <label for="date">Date</label>
+      </div>
+      <d<div class="col-75">
+      <textarea id="date" name="date"  style="height:50px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="items">Number Of Items</label>
+      </div>
+      <div class="col-75">
+                    <textarea id="items" name="items" style="height:50px"></textarea>
+                </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Type">Type Of Donation</label>
+      </div>
+      <div class="col-75">
+        <select id="type" name="Type">
+          <option value="clothes">Clothes</option>
+          <option value="money">Money</option>
+          <option value="non">Non-Perishable</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+   <div class="row">
+       <div class="col-25">
+           <label for="other">If type of donation is other...please specify</label>
+       </div>
+       <div class="col-75">
+                    <textarea id="other" name="other" style="height:50px"></textarea>
+       </div>
+   </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-75">
+      <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+
+            <button type="submit" class="subbtn">Next</button>
+
+            <div>
+                <button type="button" class="subbtn" onclick="submitAndClearForm()">New Donation</button>
+
+            </div>
+
+            <script>
+                function submitAndClearForm() {
+
+                    var date = document.getElementById("date").value;
+                    var items = document.getElementById("items").value;
+                    var type = document.getElementById("type").value;
+                    var description = document.getElementById("description").value;
+                    var other = other.document.getElementById("other").value;
+
+                    var formData = {
+                        date: date,
+                        items: items,
+                        type: type,
+                        description: description,
+                        other : other
+                    };
+
+
+                    console.log(formData);
+
+
+                    document.getElementById("donationForm").reset();
+                }
+            </script>
+  </form>
+</div>
+
+</body>
+</html>
+

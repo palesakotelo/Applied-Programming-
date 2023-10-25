@@ -1,0 +1,44 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.LogoutModel
+@{
+    ViewData["Title"] = "Logout";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+  .homebtn{
+            background-color: mediumpurple;
+            color: black;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .homebtn:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Logout</h1>
+
+        <p>You have successfully logged out of your account!!!</p>
+
+        <form action="Index">
+            <button type="submit" class="homebtn">Back To Homepage</button>
+        </form>
+    </div>
+</body>
+</html>
+
